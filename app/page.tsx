@@ -4,7 +4,7 @@ export default function Page(){
       <header style={{position:'sticky',top:0,backdropFilter:'blur(6px)',background:'rgba(255,255,255,.7)',borderBottom:'1px solid rgba(199,164,94,.3)',zIndex:50}}>
         <nav className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'12px 0'}}>
           <a href="#home" style={{display:'flex',alignItems:'center',gap:'12px',fontWeight:600,fontSize:'1.1rem',color:'var(--brand-ink)'}}>
-            <img src="/logo.png" alt="Aranima Logo" style={{height:'40px',width:'40px',transition:'0.3s transform',borderRadius:'50%'}} onMouseOver={e=>e.currentTarget.style.transform='scale(1.15) rotate(-3deg)'} onMouseOut={e=>e.currentTarget.style.transform='scale(1) rotate(0deg)'} />
+           <img src="/logo.png" alt="Aranima Logo" className="logo-img" />
             Aranima
           </a>
           <div style={{display:'flex',gap:'16px',fontSize:'.9rem'}}>
