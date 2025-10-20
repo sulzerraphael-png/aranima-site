@@ -12,3 +12,13 @@ a{color:inherit;text-decoration:none}
 .btn-primary{background:var(--brand-teal);color:white;border-color:transparent}
 .btn-primary:hover{background:var(--brand-gold)}
 .card{border:1px solid rgba(199,164,94,.2);border-radius:24px;padding:24px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.logo-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: transform 0.35s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.15) rotate(-3deg);
+}
