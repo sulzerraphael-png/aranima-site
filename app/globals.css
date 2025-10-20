@@ -1,46 +1,47 @@
-:root{--ink:#5C4433;--teal:#2D9C9B;--gold:#C7A45E;--apricot:#FFD1B9;--cream:#FFF3EC;--mint:#DDF4F3;}
+
+:root{
+  --ink:#5C4433;
+  --teal:#2D9C9B;
+  --gold:#C7A45E;
+  --apricot:#FFD1B9;
+  --cream:#FFF3EC;
+  --mint:#DDF4F3;
+}
 *{box-sizing:border-box}
-html,body{padding:0;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);
-  background: radial-gradient(120% 120% at 0% 0%, var(--apricot) 0%, var(--cream) 40%, var(--mint) 70%, var(--teal) 100%);}
+html,body{
+  padding:0;margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  color:var(--ink);
+  background: radial-gradient(120% 120% at 0% 0%,
+    var(--apricot) 0%,
+    var(--cream) 40%,
+    var(--mint) 70%,
+    var(--teal) 100%);
+}
 a{color:inherit;text-decoration:none}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
+.section{padding:64px 0}
 .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:16px;padding:.75rem 1rem;font-size:.9rem;border:1px solid rgba(0,0,0,.1);background:white}
 .btn-primary{background:var(--teal);color:white;border-color:transparent}
 .btn-primary:hover{background:var(--gold)}
 .card{border:1px solid rgba(199,164,94,.25);border-radius:24px;padding:24px;background:rgba(255,255,255,.85);backdrop-filter:blur(6px);box-shadow:0 1px 6px rgba(0,0,0,.05)}
 header.sticky{position:sticky;top:0;backdrop-filter:blur(8px);background:rgba(255,255,255,.7);border-bottom:1px solid rgba(199,164,94,.35);z-index:50}
+/* Hovers */
 .logo-img{height:40px;width:40px;border-radius:50%;transition:transform .35s ease}
 .logo-img:hover{transform:scale(1.15) rotate(-3deg)}
+.about-photo{transition:transform .35s ease, box-shadow .35s ease, filter .35s ease}
+.about-photo:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.18);filter:saturate(1.03)}
+/* USP hover-reveal */
 .hover-card{position:relative;overflow:hidden}
 .hover-card .extra{max-height:0;overflow:hidden;transition:max-height .5s ease}
-.hover-card:hover .extra{max-height:140px}
+.hover-card:hover .extra{max-height:160px}
 .hover-card .hint{position:absolute;right:16px;bottom:12px;font-size:.75rem;opacity:.6;transition:opacity .3s}
 .hover-card:hover .hint{opacity:0}
-.grad-1{background:linear-gradient(135deg, var(--apricot), transparent);}
-.grad-2{background:linear-gradient(135deg, rgba(45,156,155,.35), transparent);}
-.grad-3{background:linear-gradient(135deg, rgba(199,164,94,.35), transparent);}
+.grad-1{background:linear-gradient(135deg, var(--apricot), transparent);position:absolute;inset:0;opacity:.5}
+.grad-2{background:linear-gradient(135deg, rgba(45,156,155,.35), transparent);position:absolute;inset:0;opacity:.5}
+.grad-3{background:linear-gradient(135deg, rgba(199,164,94,.35), transparent);position:absolute;inset:0;opacity:.5}
+/* Helpers */
 .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-.section{padding:64px 0}
-h1{font-weight:700;line-height:1.15}
-h2{font-size:2rem;font-weight:600}
 small.muted{color:#7a6a5e}
 footer{border-top:1px solid rgba(0,0,0,.1);padding:32px 0;margin-top:64px;text-align:center;font-size:.8rem;opacity:.75}
-/* Logo Hover (CSS-only) */
-.logo-img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  transition: transform .35s ease;
-}
-.logo-img:hover { transform: scale(1.15) rotate(-3deg); }
-
-/* Über-mich Foto – sanfter Atem */
-.about-photo {
-  transition: transform .35s ease, box-shadow .35s ease, filter .35s ease;
-}
-.about-photo:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0,0,0,.18);
-  filter: saturate(1.03);
-}
