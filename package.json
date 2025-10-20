@@ -1,6 +1,6 @@
 {
-  "name": "aranima-updated-site",
-  "version": "1.0.1",
+  "name": "aranima-full-restore",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
